@@ -95,8 +95,12 @@ $matricola = ($matricolaQuery->fetch_assoc())['matricola'] + 1;
 				<button type="submit" class="btn btn-primary">Inserisci</button>
 			</div>
 		</div>
-	
 	</form>
+
+		<div class="clear"></div>
+		<div class="col-md-6 col-md-offset-3">
+			<a href="ricerca.php" class="btn btn-primary btn-block">Ricerca Studenti</a>
+		</div>
 	
 	</div>
 	
@@ -123,7 +127,7 @@ $matricola = ($matricolaQuery->fetch_assoc())['matricola'] + 1;
 
 	$("#facolta").on('change', function() {
 		$.ajax({
-			url: 'libs/ajax.php',
+			url: 'libs/ajax_corsi.php',
 			method: 'post',
 			data: {cdfacolta: $(this).val()},
 			dataType: 'html',
